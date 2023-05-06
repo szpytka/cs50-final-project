@@ -1,0 +1,2 @@
+1. Add Local Storage to retrieve information
+2. Add Emoji that depends on level of drank water
