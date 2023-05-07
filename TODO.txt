@@ -1,6 +1,5 @@
 
 
-3. Add Name/Surname/City/Country in the right bottom corner
 4. Edit README.md
 # YOUR PROJECT TITLE
 #### Video Demo:  <URL HERE>
