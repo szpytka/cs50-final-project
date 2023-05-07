@@ -1,6 +1,6 @@
 # DRINK WATER APP
 
-#### Video Demo: <URL HERE> // to be added soon
+#### Video Demo: <URL HERE> // added only for cs50 staff
 
 #### Description:
 
