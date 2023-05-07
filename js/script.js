@@ -35,14 +35,22 @@ function highlightCups(idx) {
 function updateBigCup() {
   const fullCups = document.querySelectorAll('.cup-small.full').length;
   const totalCups = smallCups.length;
-  console.log(totalCups);
+  const percentCalculation = ((fullCups / totalCups) * 100).toFixed('1');
   if (fullCups === 0) {
     percentage.style.visibility = 'hidden';
     percentage.style.height = '0';
   } else {
     percentage.style.visibility = 'visible';
     percentage.style.height = `${(fullCups / totalCups) * 330}px`;
-    percentage.innerText = `${((fullCups / totalCups) * 100).toFixed('1')}%`;
+    percentage.innerText = `${percentCalculation}% ${
+      percentCalculation < 25
+        ? '😢'
+        : percentCalculation < 50
+        ? '🥺'
+        : percentCalculation < 75
+        ? '🙂'
+        : '😁'
+    }`;
   }
 
   if (fullCups === totalCups) {

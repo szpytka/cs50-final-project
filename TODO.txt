@@ -1,5 +1,5 @@
-1. Add Local Storage to retrieve information
-2. Add Emoji that depends on level of drank water
+
+
 3. Add Name/Surname/City/Country in the right bottom corner
 4. Edit README.md
 # YOUR PROJECT TITLE
