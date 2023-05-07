@@ -1,7 +1,0 @@
-
-
-4. Edit README.md
-# YOUR PROJECT TITLE
-#### Video Demo:  <URL HERE>
-#### Description:
-TODO
