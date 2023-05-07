@@ -3,8 +3,10 @@ const liters = document.getElementById('liters');
 const percentage = document.getElementById('percentage');
 const remained = document.getElementById('remained');
 
-// highlight cups by clicking logic
+// load local storage
+loadLS();
 
+// highlight cups by clicking logic
 smallCups.forEach((cup, idx) => {
   cup.addEventListener('click', () => highlightCups(idx));
 });
@@ -25,6 +27,8 @@ function highlightCups(idx) {
   });
   // updating big cup
   updateBigCup();
+  // updating local storage
+  updateLS();
 }
 
 // update big cup
@@ -48,5 +52,18 @@ function updateBigCup() {
     remained.style.visibility = 'visible';
     remained.style.height = `50px`;
     liters.innerText = `${3 - (250 * fullCups) / 1000}L`;
+  }
+}
+
+function updateLS() {
+  const fullCups = document.querySelectorAll('.cup-small.full').length;
+  localStorage.setItem('localCups', fullCups);
+}
+
+function loadLS() {
+  const fullCups = JSON.parse(localStorage.getItem('localCups'));
+  for (let i = 0; i < fullCups; i++) {
+    console.log(i, fullCups);
+    highlightCups(i);
   }
 }
